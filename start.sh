@@ -17,7 +17,6 @@ export PGPASS
 pg_dump --version
 
 run="/app/run.sh"
-crontab="/app/crontab"
 crontab - <<CRONTAB
 ${CRON_SCHEDULE} ${run}
 CRONTAB
@@ -26,4 +25,4 @@ if [ -n "${BACKUP_ON_START}" ] ; then
 	"${run}"
 fi
 
-exec crond -fd8 /app/crontab
+exec crond -fd8
