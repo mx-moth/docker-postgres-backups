@@ -3,7 +3,7 @@
 # Assign some default values
 : ${BACKUP_ON_START:=}
 : ${BACKUP_KEEP_DAYS:=14}
-: ${CRON_SCHEDULE:=@daily}
+: ${CRON_SCHEDULE:="0 0 * * *"}
 : ${PGHOST:=postgres}
 : ${PGUSER:=postgres}
 : ${PGPORT:=5432}
